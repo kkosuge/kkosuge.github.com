@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RegEx Cafe</title>
+	<meta name="description" content="regular expression editor tool">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.textchange.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24416876-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+</head>
+<body>
+  <a href="https://github.com/kkosuge/kkosuge.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+  <div class="container">
+    <div id="header">
+      <img src="img/logo.png" alt="RegEx Cafe regular expression tool"/>
+    </div>
+    <div id="main">
+     <div id="regex-box"> 
+       <div class="exp" style="margin-left:40px;">Your regular expression</div>
+       <span class="big-sl" style="margin-left:5px;">/</span>
+       <input type="text" id="regex-str" />
+       <span class="big-sl">/</span>
+       <input type="text" id="regex-opt" />
+     </div>
+     <div id="text-box">
+       <span class="exp" style="margin-top:90px;margin-left:23px;">Your test string</span>
+       <textarea id="text" rows="4" cols="40"></textarea>
+     </div>
+     <div id="results-box">
+       <span class="exp" style="margin-top:90px;margin-left:52px;">Match result</span>
+       <div id="match-results"></div>
+     </div>
+    </div>
+    <div id="ref">
+      <table>
+        <tr>
+          <td>\b</td>
+          <td>Any word boundary character</td>
+          <td>.</td>
+          <td>Any single character</td>
+          <td>(a|b)</td>
+          <td>a or b</td>
+        </tr>
+        <tr>
+          <td>\s</td>
+          <td>Any whitespace character（[ \f\n\r\t\v]）</td>
+          <td>^</td>
+          <td>Start of line</td>
+          <td>a?</td>
+          <td>Zero or one of a</td>
+        </tr>
+         <tr>
+          <td>\d</td>
+          <td>Any digit（[0-9]）</td>
+          <td>$</td>
+          <td>End of line</td>
+          <td>a*</td>
+          <td>Zero or more of a</td>
+        </tr>
+        <tr>
+          <td>\D</td>
+          <td>Any non-digit（[^0-9]）</td>
+          <td>[abc]</td>
+          <td>A single character</td>
+          <td>a+</td>
+          <td>One or more of a</td>
+        </tr>
+         <tr>
+          <td>\w</td>
+          <td>Any word character（[A-Za-z0-9_]）</td>
+          <td>[^abc]</td>
+          <td>Any single character</td>
+          <td>a{3}</td>
+          <td>Exactly 3 of a</td>
+        </tr>
+         <tr>
+          <td>\W</td>
+          <td>Any non-word character </td>
+          <td>[a-z]</td>
+          <td>Any single character in the range a-z</td>
+          <td>a{3,6}</td>
+          <td>Between 3 and 6 of a</td>
+        </tr>
+    </table>
+    <div id="footer">
+      Made by <a href="http://kksg.net">kksg.net</a> (<a href="http://twitter.com/9m">@9m</a>)
+    </div>
+    </div>
+  </div>
+</body>
+</html>
