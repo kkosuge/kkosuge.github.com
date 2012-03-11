@@ -1,10 +1,7 @@
 check =->
   $("#match-results").html('')
-  regex_str = $("#regex-str").val()
-  regex_opt = $("#regex-opt").val()
-  text = $("#text").val()
-  re = new RegExp(regex_str,regex_opt)
-  results = text.match(re)
+  regex = new RegExp($("#regex-str").val(),$("#regex-opt").val())
+  results = $("#text").val().match(regex)
   for result,i in results
     content = "<div class=\"results\">#{i}: #{result}</div>"
     $("#match-results").append(content)

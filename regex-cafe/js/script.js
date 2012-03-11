@@ -1,13 +1,10 @@
 var check;
 
 check = function() {
-  var content, i, re, regex_opt, regex_str, result, results, text, _len, _results;
+  var content, i, regex, result, results, _len, _results;
   $("#match-results").html('');
-  regex_str = $("#regex-str").val();
-  regex_opt = $("#regex-opt").val();
-  text = $("#text").val();
-  re = new RegExp(regex_str, regex_opt);
-  results = text.match(re);
+  regex = new RegExp($("#regex-str").val(), $("#regex-opt").val());
+  results = $("#text").val().match(regex);
   _results = [];
   for (i = 0, _len = results.length; i < _len; i++) {
     result = results[i];
